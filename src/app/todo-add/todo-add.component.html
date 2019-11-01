@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+
+    <form class="form-inline" #taskForm="ngForm" (ngSubmit)="addNewTaskToList(taskForm)" novalidate>
+
+      <div class="col">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">#</span>
+          </div>
+          <input type="text" class="form-control" name="id" ngModel>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">aA</span>
+          </div>
+          <input type="text" class="form-control" name="task" ngModel>
+        </div>
+      </div>
+
+      <div class="col">
+        <button class="btn btn-success btn-sm mb-1">
+          <i class="fas fa-plus"></i>
+        </button>
+        <span class="btn btn-danger btn-sm mb-1" (click)="cancelAddingTask()">
+          <i class="fas fa-times"></i>
+        </span>
+      </div>
+    </form>
+
+  </div>
+</div>

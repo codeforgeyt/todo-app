@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>My to-do's list</h1>
+
+
+  <ul class="list-group" *ngIf="todos">
+    <li class="list-group-item" *ngFor="let todo of todos" (click)="editTodo(todo)">
+      <div *ngIf="!selectedTodo">
+        <span class="badge badge-pill badge-primary">{{todo.id}}</span> 
+        <span class="task">{{todo.task}}</span>
+        <span class="badge badge-pill badge-danger delete" (click)="removeTodo(todo)">X</span>
+      </div>
+      <div *ngIf="selectedTodo">
+        <div *ngIf="todo.id !== selectedTodo.id">
+            <span class="badge badge-pill badge-primary">{{todo.id}}</span> 
+            <span class="task">{{todo.task}}</span>
+            <span class="badge badge-pill badge-danger delete" (click)="removeTodo(todo)">X</span>
+        </div>
+        <div *ngIf="todo.id === selectedTodo.id">
+          <app-todo-edit [selectedTodo]="selectedTodo"
+          (sendTodoToListEvent)="sendTodoToListEventHandler($event)"></app-todo-edit>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="pt-2" *ngIf="isAddButtonClicked">
+  <app-todo-add (closeAddingEvent)="closeAddingEventHandler($event)" (addTaskToListEvent)="addTodoToListEventHandler($event)"></app-todo-add>
+</div>
+<div class="container add" *ngIf="!isAddButtonClicked">
+  <span class="add badge badge-pill badge-success" (click)="showDialogForNewTodo()">Add</span>
+</div>

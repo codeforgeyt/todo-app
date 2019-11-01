@@ -1,0 +1,40 @@
+div.container{
+    padding-top: 1.5em;
+}
+
+div.col-md-4{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+h3{
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+div.youtube{
+    color: crimson
+}
+
+div.facebook{
+    color: royalblue
+}
+
+div.twitter{
+    color: dodgerblue;
+}
+div.youtube:hover{
+    opacity: 0.8;
+}
+
+div.facebook:hover{
+    opacity: 0.8;
+}
+
+div.twitter:hover{
+    opacity: 0.8;
+}

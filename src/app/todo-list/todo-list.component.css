@@ -1,0 +1,31 @@
+span.badge{
+    font-size: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+span.task{
+    padding-left: 1em;
+    font-size: 1.2em;
+}
+
+span.delete{
+    float: right;
+}
+
+span.delete:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+div.add{
+    padding-top: 1rem;
+    padding-left: 1.6rem;
+}
+span.add{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+span.add:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
